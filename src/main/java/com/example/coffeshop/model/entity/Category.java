@@ -1,5 +1,5 @@
 package com.example.coffeshop.model.entity;
-import com.example.coffeshop.model.enums.NameEnum;
+import com.example.coffeshop.model.enums.CategoryNameEnum;
 import jakarta.persistence.*;
 
 @Entity
@@ -8,11 +8,11 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
+    @Column
     @Enumerated(EnumType.STRING)
-    private NameEnum name;
+    private CategoryNameEnum name;
     @Column(nullable = false)
-    private int neededTime;
+    private Integer neededTime;
 
     public Category() {
     }
@@ -26,20 +26,20 @@ public class Category {
         return this;
     }
 
-    public NameEnum getName() {
+    public CategoryNameEnum getName() {
         return name;
     }
 
-    public Category setName(NameEnum name) {
+    public Category setName(CategoryNameEnum name) {
         this.name = name;
         return this;
     }
 
-    public int getNeededTime() {
+    public Integer getNeededTime() {
         return neededTime;
     }
 
-    public Category setNeededTime(int neededTime) {
+    public Category setNeededTime(Integer neededTime) {
         this.neededTime = neededTime;
         return this;
     }

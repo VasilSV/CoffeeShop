@@ -1,6 +1,6 @@
 package com.example.coffeshop.model.enums;
 
-public enum NameEnum {
+public enum CategoryNameEnum {
 
     COFFEE, CAKE, DRINK, OTHER
 
